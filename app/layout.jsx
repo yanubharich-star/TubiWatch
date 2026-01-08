@@ -14,7 +14,7 @@ export const metadata = {
     siteName: 'TubiWatch',
     images: [
       {
-        url: 'https://live.staticflickr.com/65535/55030534731_a799877959_b.jpg',
+        url: 'https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg',
         width: 1200,
         height: 630,
         alt: 'TubiWatch - Complete Movie Database',
@@ -29,7 +29,7 @@ export const metadata = {
     creator: '@WatchStream123',
     title: 'TubiWatch | Complete Movie & TV Series Database',
     description: 'Explore 10,000+ movies, 5,000+ TV series, actor profiles, and streaming guides on TubiWatch.',
-    images: ['https://live.staticflickr.com/65535/55030534731_a799877959_b.jpg'],
+    images: ['https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg'],
   },
   // Tambahkan tag meta eksplisit untuk Facebook
   other: {
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 	  <head>
         {/* Tag verifikasi Google Search Console */}
-        <meta name="google-site-verification" content="pcDPx7-udVGR4mfWJrZgQRfLqHGa_oYsnyjr2VLAlAI" />
+        <meta name="google-site-verification" content="HgmQ846IyLsW8oPdi-wcCUM7VatzphTdcpFPOX-CcNo" />
         {/* Schema.org markup untuk Movie Database */}
         <script
           type="application/ld+json"
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
               "name": "TubiWatch",
               "description": "Complete movie and TV series database with streaming information",
               "url": "https://TubiWatch.netlify.app",
-              "logo": "https://live.staticflickr.com/65535/55030534731_a799877959_b.jpg",
+              "logo": "https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg",
               "sameAs": [
                 "https://TubiWatch.netlify.app"
               ]

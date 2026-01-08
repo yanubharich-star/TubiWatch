@@ -40,7 +40,7 @@ export default function About() {
           <section className="mb-16">
             <div className="text-center mb-12">
               <img
-                src="https://live.staticflickr.com/65535/55030534731_a799877959_b.jpg"
+                src="https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg"
                 alt="Movie reels and cinema tickets - Ultimate movie database for film enthusiasts"
                 width={1024}
                 height={416}
