@@ -175,7 +175,7 @@ html {
 }
 
 /* Style untuk Native Banner Adsterra */
-#container-e527b94a54d2e891ac3b8739485cbc7b {
+#container-ea6c319bed501f507571d6db10437955 {
   background-color: rgba(255, 255, 255, 0.1) !important;
   border: 2px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 12px !important;
@@ -184,59 +184,59 @@ html {
 }
 
 /* Pastikan teks di dalam banner terlihat */
-#container-e527b94a54d2e891ac3b8739485cbc7b * {
+#container-ea6c319bed501f507571d6db10437955 * {
   color: white !important;
   text-decoration: none !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 /* Style untuk link di dalam banner */
-#container-e527b94a54d2e891ac3b8739485cbc7b a {
+#container-ea6c319bed501f507571d6db10437955 a {
   color: #fbbf24 !important;
   font-weight: bold !important;
   transition: color 0.3s ease !important;
 }
 
-#container-e527b94a54d2e891ac3b8739485cbc7b a:hover {
+#container-ea6c319bed501f507571d6db10437955 a:hover {
   color: #f59e0b !important;
   text-decoration: underline !important;
 }
 
 /* Style untuk gambar di banner */
-#container-e527b94a54d2e891ac3b8739485cbc7b img {
+#container-ea6c319bed501f507571d6db10437955 img {
   border-radius: 8px !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   transition: transform 0.3s ease !important;
 }
 
-#container-e527b94a54d2e891ac3b8739485cbc7b img:hover {
+#container-ea6c319bed501f507571d6db10437955 img:hover {
   transform: scale(1.02) !important;
 }
 
 /* Style untuk judul */
-#container-e527b94a54d2e891ac3b8739485cbc7b h1,
-#container-e527b94a54d2e891ac3b8739485cbc7b h2,
-#container-e527b94a54d2e891ac3b8739485cbc7b h3,
-#container-e527b94a54d2e891ac3b8739485cbc7b h4 {
+#container-ea6c319bed501f507571d6db10437955 h1,
+#container-ea6c319bed501f507571d6db10437955 h2,
+#container-ea6c319bed501f507571d6db10437955 h3,
+#container-ea6c319bed501f507571d6db10437955 h4 {
   color: #fbbf24 !important;
   font-weight: bold !important;
   margin-bottom: 10px !important;
 }
 
 /* Style untuk teks biasa */
-#container-e527b94a54d2e891ac3b8739485cbc7b p,
-#container-e527b94a54d2e891ac3b8739485cbc7b span,
-#container-e527b94a54d2e891ac3b8739485cbc7b div:not([class*="sponsored"]) {
+#container-ea6c319bed501f507571d6db10437955 p,
+#container-ea6c319bed501f507571d6db10437955 span,
+#container-ea6c319bed501f507571d6db10437955 div:not([class*="sponsored"]) {
   color: rgba(255, 255, 255, 0.9) !important;
   line-height: 1.5 !important;
 }
 
 /* Style untuk label sponsored */
-#container-e527b94a54d2e891ac3b8739485cbc7b .sponsored,
-#container-e527b94a54d2e891ac3b8739485cbc7b .ad-label,
-#container-e527b94a54d2e891ac3b8739485cbc7b .sponsored-label,
-#container-e527b94a54d2e891ac3b8739485cbc7b [class*="sponsored"],
-#container-e527b94a54d2e891ac3b8739485cbc7b [class*="ad-"] {
+#container-ea6c319bed501f507571d6db10437955 .sponsored,
+#container-ea6c319bed501f507571d6db10437955 .ad-label,
+#container-ea6c319bed501f507571d6db10437955 .sponsored-label,
+#container-ea6c319bed501f507571d6db10437955 [class*="sponsored"],
+#container-ea6c319bed501f507571d6db10437955 [class*="ad-"] {
   background-color: rgba(59, 130, 246, 0.3) !important;
   color: #93c5fd !important;
   padding: 4px 10px !important;

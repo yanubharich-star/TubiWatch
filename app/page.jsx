@@ -10,7 +10,7 @@ export default function About() {
       {/* Hero Section dengan Optimasi SEO */}
       <div className="bg-gradient-to-b from-purple-900/50 to-slate-900 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-5 text-orange-400">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-orange-400">
             TubiWatch - Ultimate Movie & TV Series Database - Your Complete Cinema Guide
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
