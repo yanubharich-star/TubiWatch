@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import AdsterraLayoutWrapper from '../components/AdsterraLayoutWrapper';
+import AdBanner from '../components/ads/AdBanner'; // ✅ Komponen baru untuk banner
 
 export const metadata = {
   title: 'TubiWatch | Watch Movies, Stream TV Series Free - Complete Movie Database',
@@ -67,9 +68,24 @@ export default function RootLayout({ children }) {
             <header className="w-full max-w-7xl mx-auto px-4 py-4 sticky top-0 z-50 bg-slate-900 shadow-lg">
               <Navbar />
             </header>
+            
+            {/* ✅ Banner 728x90 di bawah navbar */}
+            <div className="w-full bg-slate-900 py-2">
+              <div className="max-w-7xl mx-auto px-4 flex justify-center">
+                <AdBanner 
+                  adId="728x90_banner_navbar"
+                  scriptKey="3f7f1a16b292ea5b59800f514611662e"
+                  height={90}
+                  width={728}
+                  className="rounded-lg overflow-hidden shadow-lg"
+                />
+              </div>
+            </div>
+            
             <main className="flex-grow w-full max-w-7xl mx-auto px-4 py-8 mt-2">
               {children}
             </main>
+            
             <footer className="w-full max-w-7xl mx-auto px-4 py-8">
               {/* Tempatkan div Native Banner di sini, sebelum Footer */}
               <div id="container-ea6c319bed501f507571d6db10437955"></div>

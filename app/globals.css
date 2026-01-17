@@ -248,3 +248,76 @@ html {
   display: inline-block !important;
   margin-bottom: 10px !important;
 }
+
+/* ==============================
+   STYLING UNTUK BANNER 728x90
+   ============================== */
+
+/* Container banner */
+.ad-banner-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Placeholder styling */
+.banner-728x90[data-ad-status="loading"] {
+  background: linear-gradient(90deg, #2d3748 25%, #4a5568 50%, #2d3748 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border: 1px dashed #4a5568;
+  border-radius: 6px;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-728x90 {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner-728x90 {
+    transform: scale(0.8);
+  }
+}
+
+/* Style untuk iframe banner */
+.banner-728x90 iframe {
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+}
+
+/* Hover effect untuk banner */
+.banner-728x90:hover iframe {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .banner-728x90[data-ad-status="loading"] {
+    background: linear-gradient(90deg, #1a202c 25%, #2d3748 50%, #1a202c 75%);
+    border-color: #2d3748;
+  }
+}
+
+/* Ensure banner doesn't overflow on mobile */
+@media (max-width: 740px) {
+  .banner-728x90 {
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .banner-728x90 iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 90px;
+  }
+}
