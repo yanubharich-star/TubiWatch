@@ -1,24 +1,25 @@
+import { headers } from 'next/headers'; 
 import './globals.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import AdsterraLayoutWrapper from '../components/AdsterraLayoutWrapper';
-import AdBanner from '../components/ads/AdBanner'; // ✅ Komponen baru untuk banner
+import AdsterraLayoutWrapper from '../components/layout/AdsterraLayoutWrapper'; 
+import AdBanner from '../components/ads/AdBanner'; 
 
 export const metadata = {
-  title: 'TubiWatch | Watch Movies, Stream TV Series Free - Complete Movie Database',
-  description: 'TubiWatch is your ultimate movie database with 10,000+ movies, 5,000+ TV series, actor profiles, genre pages, and yearly archives. Discover, stream, and enjoy cinematic excellence with our comprehensive entertainment platform.',
-  keywords: 'movies, tv series, streaming, movie database, actors, genres, rankings, movie archives',
+  title: 'Watch Movies Online Free | Stream TV Series HD - TubiWatch',
+  description: 'Find where to watch movies & TV series online for free or on Netflix, Disney+, Prime Video. TubiWatch tracks 10,000+ movies, 5,000+ shows, box office results, actor info, and provides HD streaming guides across all genres (action, horror, romance, anime, drakor).',
+  keywords: 'watch movies, stream TV series, movie database, where to watch, streaming guide, Netflix, Disney+, Prime Video, free movies online, HD streaming, actor profiles, box office results',
   openGraph: {
-    title: 'TubiWatch | Complete Movie & TV Series Database',
-    description: 'Your ultimate destination for movies, TV series, actor profiles, and streaming information. Explore genres, yearly archives, and top rankings.',
-    url: 'https://TubiWatch.netlify.app',
+    title: 'Watch Movies Online Free | Stream TV Series HD - TubiWatch',
+    description: 'Find where to watch movies & TV series online for free or on Netflix, Disney+, Prime Video. Get streaming guides, actor profiles, and genre recommendations.',
+    url: 'https://tubiwatch.netlify.app',
     siteName: 'TubiWatch',
     images: [
       {
         url: 'https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg',
         width: 1200,
         height: 630,
-        alt: 'TubiWatch - Complete Movie Database',
+        alt: 'TubiWatch - Watch Movies Online Free and Stream TV Series',
       },
     ],
     locale: 'en_US',
@@ -28,8 +29,8 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@WatchStream123',
     creator: '@WatchStream123',
-    title: 'TubiWatch | Complete Movie & TV Series Database',
-    description: 'Explore 10,000+ movies, 5,000+ TV series, actor profiles, and streaming guides on TubiWatch.',
+    title: 'Watch Movies Online Free | Stream TV Series HD - TubiWatch',
+    description: 'Find where to watch movies & TV series online for free or on Netflix, Disney+, Prime Video. Streaming guides and recommendations.',
     images: ['https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg'],
   },
   // Tambahkan tag meta eksplisit untuk Facebook
@@ -38,44 +39,68 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // Unwrapping headers secara async (Standar Next.js 15/16)
+  const headersList = await headers();
+  const countryCode = headersList.get('x-vercel-ip-country') || headersList.get('cf-ipcountry') || 'ID';
+
   return (
     <html lang="en">
-	  <head>
-        {/* Tag verifikasi Google Search Console */}
+      <head>
         <meta name="google-site-verification" content="HgmQ846IyLsW8oPdi-wcCUM7VatzphTdcpFPOX-CcNo" />
-        {/* Schema.org markup untuk Movie Database */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://tubiwatch.netlify.app" />
+        
+        {/* Structured Data untuk SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "MovieDatabase",
+              "@type": "WebSite",
               "name": "TubiWatch",
-              "description": "Complete movie and TV series database with streaming information",
-              "url": "https://TubiWatch.netlify.app",
+              "url": "https://tubiwatch.netlify.app",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://tubiwatch.netlify.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "description": "Find where to watch movies & TV series online for free or on Netflix, Disney+, Prime Video.",
+              "keywords": "watch movies, stream TV series, movie database, where to watch, streaming guide"
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "TubiWatch",
+              "url": "https://tubiwatch.netlify.app",
               "logo": "https://live.staticflickr.com/65535/55030179862_6b7e3a8c20_b.jpg",
+              "description": "Streaming guide and movie database",
               "sameAs": [
-                "https://TubiWatch.netlify.app"
+                "https://twitter.com/WatchStream123",
+                "https://facebook.com/TubiWatch"
               ]
             })
           }}
         />
       </head>
       <body>
-        <AdsterraLayoutWrapper>
+        <AdsterraLayoutWrapper countryCode={countryCode}>
           <div className="flex flex-col min-h-screen bg-slate-900">
             <header className="w-full max-w-7xl mx-auto px-4 py-4 sticky top-0 z-50 bg-slate-900 shadow-lg">
               <Navbar />
             </header>
             
-            {/* ✅ Banner 728x90 di bawah navbar */}
             <div className="w-full bg-slate-900 py-2">
               <div className="max-w-7xl mx-auto px-4 flex justify-center">
                 <AdBanner 
-                  adId="728x90_banner_navbar"
+                  adId="728x90_header"
                   scriptKey="3f7f1a16b292ea5b59800f514611662e"
-                  height={90}
+                  height={90} 
                   width={728}
                   className="rounded-lg overflow-hidden shadow-lg"
                 />
@@ -87,7 +112,6 @@ export default function RootLayout({ children }) {
             </main>
             
             <footer className="w-full max-w-7xl mx-auto px-4 py-8">
-              {/* Tempatkan div Native Banner di sini, sebelum Footer */}
               <div id="container-ea6c319bed501f507571d6db10437955"></div>
               <Footer />
             </footer>
